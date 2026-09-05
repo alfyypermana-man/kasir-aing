@@ -13,8 +13,8 @@ import { useStoreSettings } from '../../hooks/useStoreSettings.js'
 import { useDebounce } from '../../hooks/useDebounce.js'
 
 export default function POS() {
-  const cashierName = settings?.store_name ? `Kasir ${settings.store_name}` : 'Kasir'
   const { settings } = useStoreSettings()
+  const cashierName = settings?.store_name ? `Kasir ${settings.store_name}` : 'Kasir'
   const cart = useCart()
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
